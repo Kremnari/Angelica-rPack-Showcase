@@ -1,0 +1,258 @@
+{
+  "pack_meta": {
+    "name": "CTM showcase",
+    "description": "",
+    "pack_format": 1,
+    "mc_version": "1.7.10"
+  },
+  "rpack_order": [],
+  "external_rpack_dirs": [],
+  "vanilla_jar_name": "minecraft-1.7.10-client.jar",
+  "path_remaps": {},
+  "assets": {
+    "minecraft:blocks/dirt": "!",
+    "minecraft:blocks/dirt_podzol_side": "-"
+  },
+  "ctm_textures": [
+    {
+      "id": "a2a9bcde-4205-487d-adfe-78f9d2207f82",
+      "name": "mix1",
+      "baseAssetKey": "minecraft:blocks/grass_side_snowed",
+      "connectAssetKey": "minecraft:blocks/quartz_ore"
+    },
+    {
+      "id": "fde04320-0d9b-4aed-b25a-3a19b6c2b4fb",
+      "name": "stone-air",
+      "baseAssetKey": "minecraft:blocks/stone",
+      "connectAssetKey": "minecraft:blocks/obsidian",
+      "mode": "solid"
+    },
+    {
+      "id": "3b820853-73b2-451c-ba2b-1eaa7a9bc1ce",
+      "name": "sand-overlay",
+      "baseAssetKey": null,
+      "connectAssetKey": "minecraft:blocks/sand",
+      "mode": "translucent",
+      "featherPx": 2
+    },
+    {
+      "id": "fe4e3793-06e4-4854-b836-86e40be89009",
+      "name": "dirt overlay",
+      "baseAssetKey": null,
+      "connectAssetKey": "minecraft:blocks/dirt",
+      "mode": "translucent",
+      "featherPx": 2
+    },
+    {
+      "id": "ad173da8-4484-47e1-a1a2-59dfeb54fab3",
+      "name": "frosted",
+      "baseAssetKey": null,
+      "connectAssetKey": "biomesoplenty:blocks/hardice",
+      "mode": "translucent",
+      "featherPx": 4
+    },
+    {
+      "id": "535b6531-158f-4ca8-b344-cc0ba41d2dd9",
+      "name": "mossy stone",
+      "baseAssetKey": null,
+      "connectAssetKey": "minecraft:blocks/cobblestone_mossy",
+      "mode": "translucent",
+      "featherPx": 4
+    },
+    {
+      "id": "ef37c8b5-6a4d-40a0-aaf9-bd19093fe7cd",
+      "name": "mossyfix",
+      "baseAssetKey": "minecraft:blocks/cobblestone_mossy",
+      "connectAssetKey": "minecraft:blocks/cobblestone_mossy",
+      "mode": "solid"
+    }
+  ],
+  "ctm_properties": [
+    {
+      "id": "6fe89674-7b21-4e0f-bad4-85f4f107542a",
+      "name": "stone2air",
+      "method": "ctm_compact",
+      "connect": "list",
+      "connectMetadata": "",
+      "abuttingMetadata": "",
+      "renderLayer": 1,
+      "tiles": "0-4",
+      "weight": 50,
+      "textureRef": "fde04320-0d9b-4aed-b25a-3a19b6c2b4fb",
+      "matchBlocks": [
+        "minecraft:stone"
+      ],
+      "connectBlocks": [
+        "minecraft:air"
+      ],
+      "abuttingBlocks": [
+        "minecraft:lava",
+        "minecraft:flowing_lava"
+      ],
+      "renderPass": "solid"
+    },
+    {
+      "id": "119da1f3-f891-44c5-aa06-61ab67b239a6",
+      "name": "stone2lava",
+      "method": "ctm_compact",
+      "connect": "list",
+      "connectMetadata": "",
+      "abuttingMetadata": "",
+      "renderLayer": 6,
+      "tiles": "0-4",
+      "weight": 100,
+      "textureRef": "fde04320-0d9b-4aed-b25a-3a19b6c2b4fb",
+      "matchBlocks": [
+        "minecraft:stone"
+      ],
+      "connectBlocks": [
+        "minecraft:lava",
+        "minecraft:flowing_lava"
+      ],
+      "abuttingBlocks": [
+        "minecraft:air"
+      ],
+      "renderPass": "solid"
+    },
+    {
+      "id": "ae8dac07-4ff0-4b96-ab3f-ff3d7dcbc711",
+      "name": "sandy",
+      "method": "ctm_compact",
+      "connect": "rlist",
+      "connectMetadata": "",
+      "abuttingMetadata": "",
+      "renderLayer": 3,
+      "tiles": "0-4",
+      "weight": 10,
+      "textureRef": "3b820853-73b2-451c-ba2b-1eaa7a9bc1ce",
+      "matchBlocks": [
+        "minecraft:dirt",
+        "minecraft:gravel",
+        "minecraft:cobblestone",
+        "minecraft:stone"
+      ],
+      "connectBlocks": [
+        "minecraft:sand"
+      ],
+      "abuttingBlocks": [
+        "minecraft:air"
+      ],
+      "renderPass": "translucent"
+    },
+    {
+      "id": "fb16509a-be52-4854-8a8c-7fbdd43e5904",
+      "name": "dirty",
+      "method": "ctm_compact",
+      "connect": "rlist",
+      "connectMetadata": "",
+      "abuttingMetadata": "",
+      "renderLayer": 4,
+      "renderPass": "translucent",
+      "tiles": "null 1 2 3 4",
+      "weight": null,
+      "textureRef": "fe4e3793-06e4-4854-b836-86e40be89009",
+      "matchBlocks": [
+        "minecraft:stone",
+        "minecraft:cobblestone",
+        "minecraft:gravel"
+      ],
+      "connectBlocks": [
+        "minecraft:dirt",
+        "minecraft:grass"
+      ],
+      "abuttingBlocks": []
+    },
+    {
+      "id": "c47b12b6-db3a-4661-89ab-1667087ed956",
+      "name": "frostedface",
+      "method": "ctm_compact",
+      "connect": "",
+      "connectMetadata": "",
+      "abuttingMetadata": "",
+      "renderLayer": 5,
+      "renderPass": "translucent",
+      "tiles": "0-4",
+      "weight": 50,
+      "textureRef": "ad173da8-4484-47e1-a1a2-59dfeb54fab3",
+      "matchBlocks": [
+        "minecraft:stone",
+        "minecraft:cobblestone",
+        "minecraft:gravel",
+        "minecraft:dirt",
+        "minecraft:grass"
+      ],
+      "connectBlocks": [],
+      "abuttingBlocks": [
+        "minecraft:ice"
+      ]
+    },
+    {
+      "id": "a373b19f-cdf5-47f6-af1d-145c347e22de",
+      "name": "frostedsides",
+      "method": "ctm_compact",
+      "connect": "rlist",
+      "connectMetadata": "",
+      "abuttingMetadata": "",
+      "renderLayer": 6,
+      "renderPass": "translucent",
+      "tiles": "0-4",
+      "weight": 70,
+      "textureRef": "ad173da8-4484-47e1-a1a2-59dfeb54fab3",
+      "matchBlocks": [
+        "minecraft:stone",
+        "minecraft:cobblestone",
+        "minecraft:gravel",
+        "minecraft:dirt",
+        "minecraft:grass"
+      ],
+      "connectBlocks": [
+        "minecraft:ice"
+      ],
+      "abuttingBlocks": []
+    },
+    {
+      "id": "273a906b-bbbe-4953-994b-6c7c64a8e50b",
+      "name": "mossy stone",
+      "method": "ctm_compact",
+      "connect": "list",
+      "connectMetadata": "",
+      "abuttingMetadata": "",
+      "renderLayer": 7,
+      "renderPass": "translucent",
+      "tiles": "0-4",
+      "weight": 50,
+      "textureRef": "535b6531-158f-4ca8-b344-cc0ba41d2dd9",
+      "matchBlocks": [
+        "minecraft:stone",
+        "minecraft:cobblestone"
+      ],
+      "connectBlocks": [
+        "minecraft:water",
+        "minecraft:flowing_water"
+      ],
+      "abuttingBlocks": []
+    },
+    {
+      "id": "b722a6c4-35fc-4a9f-925a-0ac135bf7771",
+      "name": "mossystone_face",
+      "method": "ctm_compact",
+      "connect": "",
+      "connectMetadata": "",
+      "abuttingMetadata": "",
+      "renderLayer": 2,
+      "renderPass": "solid",
+      "tiles": "0-4",
+      "weight": 9,
+      "textureRef": "ef37c8b5-6a4d-40a0-aaf9-bd19093fe7cd",
+      "matchBlocks": [
+        "minecraft:cobblestone",
+        "minecraft:stone"
+      ],
+      "connectBlocks": [],
+      "abuttingBlocks": [
+        "minecraft:water",
+        "minecraft:flowing_water"
+      ]
+    }
+  ]
+}
